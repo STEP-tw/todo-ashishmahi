@@ -25,8 +25,11 @@ class ToDoActionHandler extends DefaultHandler {
       "/editItem"
     ]
   }
+  isValid(req){
+    return req.method=="POST"&& req.user;
+  }
   valid(req) {
-    return this.acceptedUrls.includes(req.url) && req.method == "POST";
+    return this.acceptedUrls.includes(req.url) && this.isValid(req);
   }
   updateDB() {
     let dataBase = JSON.stringify(this.app,null,2);

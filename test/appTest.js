@@ -147,7 +147,7 @@ describe('app', () => {
         url: "/css/main.css"
       }, res => {
         th.status_is_ok(res);
-        th.body_contains(res, "margin-left: 900px;");
+        th.body_contains(res, "margin-left: 1000px;");
         done();
       })
     });

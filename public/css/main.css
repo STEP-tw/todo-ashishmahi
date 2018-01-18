@@ -1,4 +1,28 @@
 .addANewToDo{
-  margin-left: 900px;
-  margin-top: 100px;
+  margin-left: 1000px;
+  margin-top: 200px;
+}
+.user{
+  position: fixed;
+  margin-left: 1300px;
+  margin-top: -230px;
+}
+h1{
+  font-size: 50px;
+  margin-left: 750px;
+  color: #fcc25a
+}
+h{
+  /* position: fixed; */
+  font-size: 50px;
+  color: #fcc25a
+}
+.login{
+  padding: 5%;
+  border: 1px solid  blue ;
+  height: 130px;
+  margin: 40%;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  
 }

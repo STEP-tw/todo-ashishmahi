@@ -33,7 +33,10 @@ const getAddToDoItemForm = function (input1, title) {
 }
 
 const submitToDoItem = function (title) {
-  let text = document.getElementById(`${title}text`).value;
+  let textDiv = document.getElementById(`${title}text`);
+  let text = textDiv.value;
+  let div = document.getElementsByClassName(`addToDoForm${title}`)[0];
+  div.style.visibility="hidden";
   let postData = `text=${text}&todoList=${title}`;
   let options = {
     method: "POST",
@@ -41,7 +44,7 @@ const submitToDoItem = function (title) {
     data: postData
   }
   doXmlReq(options, () => {
-    showToDo(title);
+    showToDo(title,true);
   });
 }
 
